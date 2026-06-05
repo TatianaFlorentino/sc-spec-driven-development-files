@@ -18,10 +18,10 @@ Resposta esperada:
 
 ### Critérios de aceitação
 
-- [ ] Status HTTP é exatamente `200`
-- [ ] Header `Content-Type` contém `application/json`
-- [ ] Corpo contém a chave `message` com valor `"Hello from AgentClinic"` (string exata)
-- [ ] Nenhuma outra chave está presente no corpo
+- [x] Status HTTP é exatamente `200`
+- [x] Header `Content-Type` contém `application/json`
+- [x] Corpo contém a chave `message` com valor `"Hello from AgentClinic"` (string exata)
+- [x] Nenhuma outra chave está presente no corpo
 
 ---
 
@@ -31,9 +31,9 @@ Resposta esperada:
 
 ### Critérios de aceitação
 
-- [ ] `http://localhost:3000/` é acessível após `npm run dev`
-- [ ] A porta é configurada no código, não hardcoded em múltiplos lugares
-- [ ] O terminal exibe uma mensagem confirmando que o servidor está ativo
+- [x] `http://localhost:3000/` é acessível após `npm run dev`
+- [x] A porta é configurada no código, não hardcoded em múltiplos lugares
+- [x] O terminal exibe uma mensagem confirmando que o servidor está ativo
 
 ---
 
@@ -43,8 +43,8 @@ Resposta esperada:
 
 ### Critérios de aceitação
 
-- [ ] Editar e salvar `src/index.ts` reinicia o servidor em menos de 2 segundos
-- [ ] O hot reload funciona com o script `npm run dev`
+- [x] Editar e salvar `src/index.ts` reinicia o servidor em menos de 2 segundos
+- [x] O hot reload funciona com o script `npm run dev`
 
 ---
 
@@ -54,8 +54,8 @@ Resposta esperada:
 
 ### Critérios de aceitação
 
-- [ ] `npx tsc --noEmit` executa sem erros
-- [ ] `tsconfig.json` inclui `"strict": true`
+- [x] `npx tsc --noEmit` executa sem erros
+- [x] `tsconfig.json` inclui `"strict": true`
 
 ---
 
@@ -70,8 +70,8 @@ src/
 
 ### Critérios de aceitação
 
-- [ ] O entry point é `src/index.ts`
-- [ ] Nenhum arquivo TypeScript existe fora de `src/` (exceto configurações de tooling)
+- [x] O entry point é `src/index.ts`
+- [x] Nenhum arquivo TypeScript existe fora de `src/` (exceto configurações de tooling)
 
 ---
 
@@ -89,5 +89,5 @@ src/
 
 ### Critérios de aceitação
 
-- [ ] `npm install` seguido de `npm run dev` funciona em uma máquina limpa
-- [ ] Nenhuma dependência além das listadas acima está em `package.json`
+- [x] `npm install` seguido de `npm run dev` funciona em uma máquina limpa
+- [x] Nenhuma dependência além das listadas acima está em `package.json`

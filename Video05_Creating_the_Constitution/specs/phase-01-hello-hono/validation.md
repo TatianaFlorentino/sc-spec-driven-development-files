@@ -88,11 +88,11 @@ Qualquer linha de erro indica falha no requisito **RNF-01**.
 
 Execute cada validação e marque antes de avançar para a Phase 02:
 
-- [ ] V-01 curl retorna `200` com corpo correto
-- [ ] V-02 navegador exibe o JSON
-- [ ] V-03 `tsc --noEmit` sem erros
-- [ ] V-04 hot reload atualiza a resposta em menos de 2 segundos
-- [ ] `npm run dev` exibe mensagem de confirmação no terminal
+- [x] V-01 curl retorna `200` com corpo correto
+- [x] V-02 navegador exibe o JSON
+- [x] V-03 `tsc --noEmit` sem erros
+- [x] V-04 hot reload atualiza a resposta em menos de 2 segundos
+- [x] `npm run dev` exibe mensagem de confirmação no terminal
 
 ---
 

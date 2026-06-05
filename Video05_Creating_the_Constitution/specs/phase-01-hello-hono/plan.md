@@ -28,11 +28,9 @@ Antes de modelar dados ou escrever lógica de negócio, precisamos de um ponto d
 | Entry point | `src/index.ts` | Convenção clara; TypeScript desde o início |
 | Porta | `3000` | Padrão de mercado para desenvolvimento local |
 | Hot reload | `tsx watch` | Zero configuração, funciona com TypeScript nativamente |
-| Resposta da rota | JSON `{ message: "Hello from AgentClinic Tatiana" }` | JSON é o formato da API; consistente com as fases seguintes |
+| Resposta da rota | JSON `{ message: "Hello from AgentClinic" }` | JSON é o formato da API; consistente com as fases seguintes |
 
 ## Relação com o Roadmap
 
 Esta fase entrega o **Entregável da Phase 1** definido em [specs/roadmap.md](../roadmap.md):
-> servidor rodando em `localhost:3000` respondendo `{ status: "clinic is open" }`
-
-> **Nota:** o campo mudou de `status` para `message` para deixar a rota raiz semanticamente distinta da futura rota `GET /health`.
+> servidor rodando em `localhost:3000` respondendo `{ message: "Hello from AgentClinic" }`
