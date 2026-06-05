@@ -4,16 +4,16 @@ Cada fase corresponde a uma aula. O projeto avança de forma incremental: no fin
 
 ---
 
-## Fase 1 — Scaffold do Projeto
+## Fase 1 — Scaffold do Projeto ✅
 **Aula: Estrutura inicial e "Hello, Clinic!"**
 
-- [ ] Inicializar projeto Node.js com TypeScript
-- [ ] Configurar Hono e criar rota `GET /health`
-- [ ] Configurar `tsconfig.json` com strict mode
-- [ ] Criar estrutura de diretórios (`src/`, `specs/`, `public/`)
-- [ ] Adicionar script `dev` com hot reload
+- [x] Inicializar projeto Node.js com TypeScript
+- [x] Configurar Hono e criar rota `GET /` respondendo JSON
+- [x] Configurar `tsconfig.json` com strict mode
+- [x] Criar estrutura de diretórios (`src/`, `specs/`)
+- [x] Adicionar script `dev` com hot reload (`tsx watch`)
 
-**Entregável:** servidor rodando em `localhost:3000` respondendo `{ status: "clinic is open" }`
+**Entregável:** servidor rodando em `localhost:3000` respondendo `{ message: "Hello from AgentClinic" }`
 
 ---
 

@@ -6,7 +6,8 @@
 |--------|-----------|--------|
 | Runtime | Node.js | 20+ LTS |
 | Linguagem | TypeScript | 5.x |
-| Framework Web | Hono | 4.x |
+| Framework Web | Hono | 3.x |
+| Adapter Node.js | @hono/node-server | 0.5.x |
 | Banco de Dados | SQLite | via `better-sqlite3` |
 | Frontend | HTML + CSS + JS vanilla | — |
 
@@ -20,8 +21,16 @@ Runtime JavaScript amplamente conhecido, com ecossistema maduro. Facilita a tran
 ### TypeScript
 Tipos explícitos servem como documentação viva: ao ler `Patient`, `Symptom` e `Diagnosis`, o estudante entende o modelo de dados sem precisar abrir o banco. Erros aparecem em tempo de compilação, não em produção.
 
-### Hono
+### Hono + @hono/node-server
 Framework web leve e moderno, com API limpa e tipagem nativa para TypeScript. Cada rota fica clara e autocontida — ideal para fins didáticos. Sem "mágica" excessiva como em alguns frameworks maiores.
+
+O adapter `@hono/node-server` conecta o Hono ao runtime Node.js. Na versão `0.5.x` instalada, a assinatura de `serve()` recebe um único objeto:
+
+```ts
+serve({ fetch: app.fetch, port })
+```
+
+Versões `1.x+` do adapter usam uma API diferente — atenção ao atualizar.
 
 ```ts
 // Exemplo: quão legível é uma rota no Hono
