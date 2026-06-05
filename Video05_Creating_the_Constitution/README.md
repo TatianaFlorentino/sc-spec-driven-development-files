@@ -1,119 +1,58 @@
-# AgentClinic SDD
+# AgentClinic — SDD na Prática
 
-A fictional clinic where AI agents seek help for their most common ailments — hallucination, context rot, infinite loops, and identity drift.
+## Sobre o projeto
 
-Built as a hands-on example of **Spec-Driven Development (SDD)**: every feature starts as a written specification before a single line of code is written.
+Um servidor web construído do zero usando Spec-Driven Development (SDD),
+como parte do curso Spec-Driven Development with Coding Agents da DeepLearning.AI.
 
-> Part of the course [Reasoning About Code with Claude](https://www.deeplearning.ai) on DeepLearning.AI.
+## O que é SDD
 
----
-
-## What is Spec-Driven Development?
-
-SDD is a development workflow where specs come before code:
-
-1. **Write the Constitution** — mission, tech stack, roadmap (`specs/`)
-2. **Specify the feature** — plan, requirements, acceptance criteria
-3. **Implement** — code that satisfies the spec, nothing more
-4. **Validate** — run the checks defined in the spec
-5. **Replan** — update the constitution to reflect what was actually built
-
-The commit history is the audit trail: you can read it like a story.
-
----
+Spec-Driven Development é a prática de escrever especificações em markdown
+antes de qualquer linha de código — e usar essas specs como contexto para
+um agente de IA implementar.
 
 ## Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Runtime | Node.js 20+ LTS |
-| Language | TypeScript 5.x (strict) |
-| Web Framework | Hono 3.x |
-| Node Adapter | @hono/node-server 0.5.x |
-| Database | SQLite via `better-sqlite3` *(Phase 02)* |
-| Frontend | HTML + CSS + JS vanilla *(Phase 05)* |
+- TypeScript
+- Hono (framework web)
+- Node.js v18+
+- Claude Code (agente de IA)
+- VS Code
 
----
-
-## Running locally
+## Como rodar localmente
 
 ```bash
-git clone <repo-url>
-cd Video05_Creating_the_Constitution
+git clone https://github.com/TatianaFlorentino/sc-spec-driven-development-files
+cd my-agentclinic
 npm install
 npm run dev
 ```
 
-The server starts at `http://localhost:3000`.
+Acesse: http://localhost:3000
 
-```bash
-curl http://localhost:3000/
-# {"message":"Hello from AgentClinic"}
-```
-
----
-
-## Project structure
+## Estrutura do projeto
 
 ```
-agentclinic/
-├── specs/                        # The Constitution — specs before code
-│   ├── mission.md                # Vision, audience, scope, constraints
-│   ├── tech-stack.md             # Stack decisions and rationale
-│   ├── roadmap.md                # Development phases
-│   └── phase-01-hello-hono/      # Feature spec: Phase 01
-│       ├── plan.md               # What & why
-│       ├── requirements.md       # Acceptance criteria
-│       └── validation.md        # How to verify
-├── src/
-│   └── index.ts                  # Hono server entry point
-├── package.json
-└── tsconfig.json
+specs/
+  mission.md
+  tech-stack.md
+  roadmap.md
+  phase-01-hello-hono/
+    plan.md
+    requirements.md
+    validation.md
+src/
+  index.ts
 ```
 
----
+## Fluxo SDD seguido
 
-## SDD in the commit history
+1. Constituição — mission.md + tech-stack.md + roadmap.md
+2. Especificação — plan.md + requirements.md + validation.md
+3. Implementação — agente executa a spec
+4. Validação — verificar cada critério de aceitação
+5. Replanejamento — atualizar Constituição entre features
 
-Each commit maps to a step in the SDD workflow:
+## Curso original
 
-```
-feat: add project constitution (mission, tech-stack, roadmap)
-  └─ Step 1 — Constitution written before any feature work
-
-docs: add phase-01 hello-hono specs
-  └─ Step 2 — Spec written before implementation
-
-feat(phase-01): implement hello-hono server
-  └─ Step 3 — Code written to satisfy the spec
-
-fix(phase-01): align response message and startup log with spec
-  └─ Step 4 — Validation caught a mismatch; code fixed to match spec
-
-docs: update constitution to reflect phase-01 reality
-  └─ Step 5 — Constitution updated after implementation learnings
-
-docs(phase-01): close out all spec files after validation
-  └─ Acceptance criteria and checklist marked done
-```
-
-The pattern repeats for every phase: **spec → code → validate → replan**.
-
----
-
-## Roadmap
-
-| Phase | Description | Status |
-|-------|-------------|--------|
-| 01 | Hello, Hono — basic server | ✅ Done |
-| 02 | Data modeling — TypeScript types + SQLite schema | Planned |
-| 03 | Agents API — CRUD for patient agents | Planned |
-| 04 | Consultations API — symptoms in, diagnosis out | Planned |
-| 05 | Basic web UI | Planned |
-| 06 | Polish and documentation | Planned |
-
----
-
-## Learn more
-
-This project is part of **[Reasoning About Code with Claude](https://www.deeplearning.ai)** on DeepLearning.AI — a course on using Claude to write better-specified, more maintainable software.
+https://learn.deeplearning.ai/courses/spec-driven-development-with-coding-agents
